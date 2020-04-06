@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF99</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="judul">#FF003300</color>
+    <color name="nama_app">#FFFFFFFF</color>
+    <color name="txt">#FF000000</color>
+    <color name="btn">#FFFF9900</color>
+    <color name="background">#FFFFFF99</color>
+    <color name="bg_menu">#FFFF99CC</color>
+    <color name="judul_menu">#FF969696</color>
+    <color name="btn_hitung">#FF969696</color>
+</resources>
