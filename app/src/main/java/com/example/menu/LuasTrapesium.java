@@ -19,7 +19,7 @@ public class LuasTrapesium extends AppCompatActivity {
         setContentView(R.layout.activity_luas_trapesium);
 
         alas = findViewById(R.id.inputAlas);
-        atap = findViewById(R.id.inputTinggi);
+        atap = findViewById(R.id.inputAtap);
         tinggi = findViewById(R.id.inputTinggi);
         hasil = findViewById(R.id.textViewHasil);
         hitung = findViewById(R.id.btnHitungLuasTrapesium);
@@ -35,7 +35,7 @@ public class LuasTrapesium extends AppCompatActivity {
                 float t = Float.parseFloat(mrg);
                 double hs = luas_trapesium(AB, EF, t);
                 String output = String.valueOf(hs);
-                hasil.setText("Luas trapesium dengan panjang AB : " + AB + " dan panjang EF : " + EF + " dan tinggi : " + t + " adalah : " + output.toString());
+                hasil.setText("Hasil luas trapesium dengan panjang AB : " + AB + " dan panjang EF : " + EF + " dan tinggi : " + t + " adalah : " + output.toString());
             }
         });
     }

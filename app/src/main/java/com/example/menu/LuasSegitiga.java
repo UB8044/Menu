@@ -32,7 +32,7 @@ public class LuasSegitiga extends AppCompatActivity {
                 float t = Float.parseFloat(tng);
                 double hs = luas_segitiga(a, t);
                 String output = String.valueOf(hs);
-                hasil.setText("Luas segitiga dengan alas : " + a + " dan tinggi : " + t + output.toString());
+                hasil.setText("Hasil luas segitiga dengan alas : " + a + " dan tinggi : " + t + output.toString());
             }
         });
     }

@@ -32,7 +32,7 @@ public class LuasPersegiPanjang extends AppCompatActivity {
                 float l = Float.parseFloat(lbr);
                 double hs = keliling_persegi_panjang(p, l);
                 String output = String.valueOf(hs);
-                hasil.setText("Keliling persegi panjang dengan panjang : " + p + " dan lebar : " + l + " adalah : " + output.toString());
+                hasil.setText("Hasir luas persegi panjang dengan panjang : " + p + " dan lebar : " + l + " adalah : " + output.toString());
             }
         });
     }

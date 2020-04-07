@@ -35,7 +35,7 @@ public class KelilingSegitiga extends AppCompatActivity {
                 float c = Float.parseFloat(mrg);
                 double hs = keliling_segitiga(a, t, c);
                 String output = String.valueOf(hs);
-                hasil.setText("Keliling persegi panjang dengan alas : " + a + " , tinggi : " + t + " dan sisi miring : " + c + " adalah : " + output.toString());
+                hasil.setText("Hasil keliling segitiga dengan alas : " + a + " , tinggi : " + t + " dan sisi miring : " + c + " adalah : " + output.toString());
             }
         });
     }

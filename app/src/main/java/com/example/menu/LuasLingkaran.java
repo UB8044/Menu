@@ -29,7 +29,7 @@ public class LuasLingkaran extends AppCompatActivity {
                 float r = Float.parseFloat(panjang_sisi);
                 double hs = luas_lingkaran(r);
                 String output = String.valueOf(hs);
-                hasil.setText("Hasil keliling persegi dengan jari-jari : " + r + " adalah : " + output.toString());
+                hasil.setText("Hasil luas lingkaran dengan jari-jari : " + r + " adalah : " + output.toString());
             }
         });
     }

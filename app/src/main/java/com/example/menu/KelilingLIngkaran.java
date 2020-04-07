@@ -29,7 +29,7 @@ public class KelilingLIngkaran extends AppCompatActivity {
                 float r = Float.parseFloat(panjang_sisi);
                 double hs = keliling_lingkaran(r);
                 String output = String.valueOf(hs);
-                hasil.setText("Hasil keliling persegi dengan jari-jari : " + r + " adalah : " + output.toString());
+                hasil.setText("Hasil keliling lingakran dengan jari-jari : " + r + " adalah : " + output.toString());
             }
         });
     }

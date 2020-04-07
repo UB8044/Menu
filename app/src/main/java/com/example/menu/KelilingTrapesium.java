@@ -19,7 +19,7 @@ public class KelilingTrapesium extends AppCompatActivity {
         setContentView(R.layout.activity_keliling_trapesium);
 
         alas = findViewById(R.id.inputAlas);
-        atap = findViewById(R.id.inputTinggi);
+        atap = findViewById(R.id.inputAtap);
         miring = findViewById(R.id.inputSisiMiring);
         hasil = findViewById(R.id.textViewHasil);
         hitung = findViewById(R.id.btnHitungKelilingTrapesium);
@@ -35,12 +35,12 @@ public class KelilingTrapesium extends AppCompatActivity {
                 float AE = Float.parseFloat(mrg);
                 double hs = keliling_trapesium(AB, EF, AE);
                 String output = String.valueOf(hs);
-                hasil.setText("Keliling trapesium dengan panjang AB : " + AB + " dan panjang EF : " + EF + " dan panjang AE : " + AE + " adalah : " + output.toString());
+                hasil.setText("Hasil keliling trapesium dengan panjang AB : " + AB + " dan panjang EF : " + EF + " dan panjang AE : " + AE + " adalah : " + output.toString());
             }
         });
     }
 
     public float keliling_trapesium ( float AB, float EF, float AE){
-        return (AB+EF+(2*AE));
+        return (2*AE)+(AB+EF);
     }
 }

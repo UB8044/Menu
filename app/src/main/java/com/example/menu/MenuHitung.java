@@ -11,6 +11,7 @@ import android.widget.PopupMenu;
 
 public class MenuHitung extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
 
+    final int[] index = {1, 2, 3, 4, 5};
     Button persegi, lingkaran, persegipanjang, segitiga, trapesium, exit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,8 @@ public class MenuHitung extends AppCompatActivity implements PopupMenu.OnMenuIte
         segitiga = findViewById(R.id.btnSegitiga);
         trapesium = findViewById(R.id.btnTrapesium);
 
+
+
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +37,7 @@ public class MenuHitung extends AppCompatActivity implements PopupMenu.OnMenuIte
         persegi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                index[0] = 1;
                 PopupMenu ppMenu = new PopupMenu(MenuHitung.this, v);
                 ppMenu.setOnMenuItemClickListener(MenuHitung.this);
                 ppMenu.inflate(R.menu.optionmenu);
@@ -44,6 +48,7 @@ public class MenuHitung extends AppCompatActivity implements PopupMenu.OnMenuIte
         lingkaran.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                index[0] = 2;
                 PopupMenu ppMenu = new PopupMenu(MenuHitung.this, v);
                 ppMenu.setOnMenuItemClickListener(MenuHitung.this);
                 ppMenu.inflate(R.menu.optionmenu);
@@ -54,6 +59,7 @@ public class MenuHitung extends AppCompatActivity implements PopupMenu.OnMenuIte
         persegipanjang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                index[0] = 3;
                 PopupMenu ppMenu = new PopupMenu(MenuHitung.this, v);
                 ppMenu.setOnMenuItemClickListener(MenuHitung.this);
                 ppMenu.inflate(R.menu.optionmenu);
@@ -64,6 +70,7 @@ public class MenuHitung extends AppCompatActivity implements PopupMenu.OnMenuIte
         segitiga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                index[0] = 4;
                 PopupMenu ppMenu = new PopupMenu(MenuHitung.this, v);
                 ppMenu.setOnMenuItemClickListener(MenuHitung.this);
                 ppMenu.inflate(R.menu.optionmenu);
@@ -74,6 +81,7 @@ public class MenuHitung extends AppCompatActivity implements PopupMenu.OnMenuIte
         trapesium.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                index[0] = 5;
                 PopupMenu ppMenu = new PopupMenu(MenuHitung.this, v);
                 ppMenu.setOnMenuItemClickListener(MenuHitung.this);
                 ppMenu.inflate(R.menu.optionmenu);
@@ -85,10 +93,30 @@ public class MenuHitung extends AppCompatActivity implements PopupMenu.OnMenuIte
     public boolean onMenuItemClick(MenuItem menuItem) {
         switch (menuItem.getItemId()){
             case R.id.luas:
-                startActivity(new Intent(this, LuasPersegi.class));
+                if (index[0] == 1){
+                    startActivity(new Intent(this, LuasPersegi.class));
+                } else if (index[0] == 2){
+                    startActivity(new Intent(this, LuasLingkaran.class));
+                } else if (index[0] == 3){
+                    startActivity(new Intent(this, LuasPersegiPanjang.class));
+                } else if (index[0] == 4){
+                    startActivity(new Intent(this, LuasSegitiga.class));
+                } else if (index[0] == 5){
+                    startActivity(new Intent(this, LuasTrapesium.class));
+                }
                 break;
             case R.id.keliling:
-                startActivity(new Intent(this, KelilingPersegi.class));
+                if (index[0] == 1){
+                    startActivity(new Intent(this, KelilingPersegi.class));
+                } else if (index[0] == 2){
+                    startActivity(new Intent(this, KelilingLIngkaran.class));
+                } else if (index[0] == 3){
+                    startActivity(new Intent(this, KelilingPersegiPanjang.class));
+                } else if (index[0] == 4){
+                    startActivity(new Intent(this, KelilingSegitiga.class));
+                } else if (index[0] == 5){
+                    startActivity(new Intent(this, KelilingTrapesium.class));
+                }
                 break;
         }
         return true;
